@@ -34,7 +34,7 @@ const MovieDetailsPage = () => {
     navigate(from);
   };
 
-  if (loading) return <div className={styles.loader}><BeatLoader color="#007bff;" /></div>;
+  if (loading) return <div className={styles.loader}><BeatLoader color="#f3eeeee4" /></div>;
   if (error) return <div className={styles.error}>{error}</div>;
   if (!movie) return null;
 

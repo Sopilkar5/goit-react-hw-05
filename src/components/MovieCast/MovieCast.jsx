@@ -28,7 +28,7 @@ const MovieCast = () => {
     loadCast();
   }, [movieId]);
 
-  if (loading) return <div className={styles.loader}><BeatLoader color="#007bff;" /></div>;
+  if (loading) return <div className={styles.loader}><BeatLoader color="#f3eeeee4" /></div>;
   if (error) return <p className={styles.error}>{error}</p>;
 
   return (
@@ -42,13 +42,13 @@ const MovieCast = () => {
                 src={
                   actor.profile_path
                     ? `https://image.tmdb.org/t/p/w154${actor.profile_path}`
-                    : 'https://via.placeholder.com/154x231?text=Немає+Фото'
+                    : 'https://placehold.co/154x231?text=Немає+Фото'
                 }
                 alt={actor.name}
                 className={styles.actorImage}
                 loading="lazy"
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/154x231?text=Немає+Фото';
+                  e.target.src = 'https://dummyimage.com/154x231/gray/fff&text=Немає+Фото';
                 }}
               />
               <p className={styles.actorName}>{actor.name}</p>
