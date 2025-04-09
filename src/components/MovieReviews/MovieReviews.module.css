@@ -1,0 +1,44 @@
+.reviewsContainer {
+    padding: 20px;
+    color: aliceblue;
+  }
+  
+  .reviewsList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .reviewItem {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .reviewContent {
+    font-size: 14px;
+    color: #f3eeeee4;
+    margin: 0 0 5px 0;
+    line-height: 1.4;
+  }
+  
+  .reviewAuthor {
+    font-size: 12px;
+    color: #b0b0b0;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .error {
+    color: red;
+    font-size: 16px;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }

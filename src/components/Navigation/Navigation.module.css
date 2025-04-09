@@ -1,0 +1,35 @@
+.navigation {
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-right: 20px;
+}
+
+.navLink {
+  color: rgb(219, 214, 214);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  color: #0f0257;
+}
+
+.navLink.active {
+  color: #0d4aad;
+}

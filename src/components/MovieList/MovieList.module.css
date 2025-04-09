@@ -1,0 +1,37 @@
+.movieListContainer {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.trendsTitle {
+  color: #fffb00b7;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.movieList {
+  padding: 0;
+  list-style: none;
+}
+
+.movieItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.movieNumber {
+  font-size: 18px;
+  color: #a694d8e4;
+  margin-right: 10px;
+}
+
+.movieLink {
+  text-decoration-style: wavy;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.movieLink:hover {
+  text-decoration: underline;
+}

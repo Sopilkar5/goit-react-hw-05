@@ -1,0 +1,56 @@
+.moviesPage {
+  padding: 20px;
+  padding-top: 56px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.searchContainer {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.searchInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 230px;
+  border-radius: 4px;
+  border: 1px solid #1536ad;
+  box-sizing: border-box;
+}
+
+.searchButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bffa3;
+  color: rgba(226, 225, 225, 0.941);
+  border: 1px solid #1536ad;
+}
+
+.searchButton:hover {
+  background-color: #012f61;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.noResults {
+  font-size: 16px;
+  color: #bbb9b9;
+  margin-top: 10px;
+  margin-left: 40px;
+}
