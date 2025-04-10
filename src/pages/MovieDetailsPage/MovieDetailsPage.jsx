@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate, useLocation, Link, Outlet } from 'react-router-dom';
 import { fetchMovies } from '../../api';
 import { BeatLoader } from 'react-spinners';
@@ -11,6 +11,7 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
+  const locationRef = useRef(location.state);
 
   useEffect(() => {
     const loadMovie = async () => {
@@ -30,7 +31,7 @@ const MovieDetailsPage = () => {
   }, [movieId]);
 
   const handleGoBack = () => {
-    const from = location.state?.from || '/movies';
+    const from = locationRef.current?.from || '/movies';
     navigate(from);
   };
 

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { BeatLoader } from 'react-spinners';
 import Navigation from './components/Navigation/Navigation';
 
@@ -12,7 +12,7 @@ const MovieReviews = React.lazy(() => import('./components/MovieReviews/MovieRev
 
 function App() {
   return (
-    <Router>
+    <>
       <Navigation />
       <Suspense fallback={
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -29,7 +29,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 }
 
