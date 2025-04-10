@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { fetchMovies } from '../../api';
 import MovieList from '../../components/MovieList/MovieList';
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const loadPopularMovies = async () => {
+    const loadTrendingMovies = async () => {
       try {
-        setError(null);
-        const data = await fetchMovies('/movie/popular');
+        const data = await fetchMovies('/trending/movie/day');
         setMovies(data.results || []);
       } catch (error) {
-        setError('Failed to fetch popular movies. Please try again later.');
-        console.error('Error fetching data: ', error);
+        setError('Failed to load trending movies.');
+        console.error('Error:', error);
       }
     };
-    loadPopularMovies();
+    loadTrendingMovies();
   }, []);
 
+  if (error) return <p className={styles.error}>{error}</p>;
+
   return (
-    <div>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <MovieList movies={movies} showNoResults={true} />
+    <div className={styles.homePage}>
+      {movies.length > 0 && <MovieList movies={movies} showTrendsTitle={true} />}
     </div>
   );
 };
