@@ -14,7 +14,7 @@ const MovieList = ({ movies, showTrendsTitle = false }) => {
             <span className={styles.movieNumber}>{index + 1}.</span>
             <Link
               to={`/movies/${movie.id}`}
-              state={{ from: location.pathname }}
+              state={{ from: location }}
               className={styles.movieLink}
             >
               {movie.title}
